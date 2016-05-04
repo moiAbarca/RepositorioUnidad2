@@ -25,14 +25,18 @@
 </nav>
 
 <!--contenedor principal que englobará al form-->
-<div class="container main-content">
-    <form name="theForm">
+<div class="container main-content" ng-controller="LoginFormController">
+    <form name="theForm" ng-submit="onSubmit">
         <!--Input Text-->
         <div class="form-group">
             <label for="name">Tu nombre</label>
             <input type="text"
             class="form-control"
             id="name">
+        </div>
+        <!--Botón que gatilla submit-->
+        <div class="form-group">
+            <button class="btn btn-danger" type="submit">Registrar</button>
         </div>
     </form>
 
