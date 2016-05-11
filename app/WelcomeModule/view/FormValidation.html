@@ -33,13 +33,33 @@
             <input type="text"
             class="form-control"
             id="name"
-            ng-model="forModel.name">
+            ng-model="formModel.name">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Tu Password</label>
+            <input type="password"
+                   class="form-control"
+                   id="password"
+                   ng-model="formModel.password">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Tu E-mail</label>
+            <input type="email"
+                   class="form-control"
+                   id="email"
+                   ng-model="formModel.email">
         </div>
         <!--Botón que gatilla submit-->
         <div class="form-group">
             <button class="btn btn-danger" type="submit">Registrar</button>
         </div>
     </form>
+    <!--el pipe es para decirle que me muestre como...-->
+    <pre> {{ formModel.name | json }} </pre>
+    <pre> {{ formModel.password | json }} </pre>
+    <pre> {{ formModel.email | json }} </pre>
 
 </div>
 <!--Archivo JS requeridos para el proyecto de angularJS-->
